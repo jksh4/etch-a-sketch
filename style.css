@@ -1,0 +1,9 @@
+.whole{
+    width: 960px;
+    height: 960px;
+    background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+

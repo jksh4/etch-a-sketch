@@ -7,12 +7,22 @@
 </head>
 <body>
     <h1>Simple Etch-a-sketch</h1>
-    <button id="restart">Start over</button>
+
+    <p id="blockNum">Restart? Enter blocks per side 
+        <input type="number" id="numBlocks" name="numBlocks" min="5" max="200">
+    </p>
+    
+    <button class="jscolor {valueElement:'chosen-value', onFineChange:'setColor(this)'}">
+            Pick color
+    </button>
+    
+    <button id="onOff"></button>
     
     <div class="whole" id="grid">
         
 
     </div>
 
+    <script src="jscolor.js"></script>
     <script src="etch.js"></script>
 </body>

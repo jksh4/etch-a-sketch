@@ -5,6 +5,12 @@ var paint = true;
 document.getElementById("onOff").innerText = "ON";
 
 document.getElementById("numBlocks").addEventListener("input", resetGrid);
+document.getElementsByClassName("jscolor")[0].value = "808080";
+
+document.getElementById("onOff").addEventListener("click", () => {
+    if(paint == true) disablePaint();
+    else enablePaint();
+});
 
 displayGrid();
 enablePaint();

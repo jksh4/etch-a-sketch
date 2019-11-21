@@ -8,16 +8,25 @@
 <body>
     <h1>Simple Etch-a-sketch</h1>
 
-    <p id="blockNum">Restart? Enter blocks per side 
-        <input type="number" id="numBlocks" name="numBlocks" min="5" max="200">
-    </p>
     
-    <button class="jscolor {valueElement:'chosen-value', onFineChange:'setColor(this)'}">
-            Pick color
-    </button>
     
-    <button id="onOff"></button>
     
+    <div id="controls">
+            <p id="blockNum">Restart? <br>Blocks per side (5-200) 
+                    <input type="number" id="numBlocks" name="numBlocks" min="5" max="200">
+            </p>
+            <p id="paintInstr">Paintbrush (on/off)<br>Use ENTER key to toggle
+            <button id="onOff"></button>
+            </p>
+            
+            <p>Choose color
+            <!-- <button class="jscolor {valueElement:'chosen-value', onFineChange:'setColor(this)'}"> -->
+            <button class="jscolor {valueElement:null,value:'808080', onFineChange:'setColor(this)'}">
+            </button>
+            </p>
+    </div>
+    
+
     <div class="whole" id="grid">
         
 

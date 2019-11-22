@@ -28,24 +28,19 @@ checkbox.addEventListener( 'change', function() {
         randomColor = true;
         // document.getElementsByClassName("jscolor")[0].style.display = none;
         document.getElementById("colorPicker").style.display = "none";
-        console.log("it's checked");
+        setRandomColor();
     } else {
         randomColor = false;
         // document.getElementsByClassName("jscolor")[0].style.display = inline;
         document.getElementById("colorPicker").style.display = "block";
-        
-        console.log("jscolor.value: " + document.getElementsByClassName("jscolor")[0].value);
-        console.log("color: " + color);
-
-        console.log("it's not checked");
     }
 });
 
 function colorit(event){
     if(paint == true){
+        event.target.style.backgroundColor = color;
         if(randomColor == true) 
             setRandomColor();
-        event.target.style.backgroundColor = color;
     }
 }
 

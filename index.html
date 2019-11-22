@@ -12,17 +12,20 @@
     
     
     <div id="controls">
-            <p id="blockNum">Restart? <br>Blocks per side (5-200) 
-                    <input type="number" id="numBlocks" name="numBlocks" min="5" max="200">
+            <p id="blockNum">Restart? <br><span class="smaller">Blocks per side (5-200)</span> 
+                    <input type="number" value="16" id="numBlocks" name="numBlocks" min="5" max="200">
             </p>
-            <p id="paintInstr">Paintbrush (on/off)<br>Use ENTER key to toggle
+            <p id="paintInstr">Paintbrush on/off<br><span class="smaller">Use ENTER key to toggle</span>
             <button id="onOff"></button>
             </p>
-            
-            <p>Choose color
-            <!-- <button class="jscolor {valueElement:'chosen-value', onFineChange:'setColor(this)'}"> -->
-            <button class="jscolor {valueElement:null,value:'808080', onFineChange:'setColor(this)'}">
-            </button>
+
+            <p id="chColor">Choose color<br>
+                <span class="smaller">Random colors every block<input name="randomCheckBox" type="checkbox" id="myCheck"></span>
+                <!-- <button class="jscolor {valueElement:'chosen-value', onFineChange:'setColor(this)'}"> -->
+                <span id="colorPicker">
+                    <button id="jsc" class="jscolor {valueElement:null,value:'808080', onFineChange:'setColor(this)'}"><span class='smoke'>Pick a color</span></button>
+                </span>
+                
             </p>
     </div>
     

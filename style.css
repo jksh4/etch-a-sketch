@@ -22,6 +22,19 @@ body{
     margin-left: 50px;
     margin-right: 50px;
 }
+.smaller{
+    font-size: 0.75rem;
+}
+input[type="checkbox"]{
+    vertical-align: bottom;
+}
+#jsc{
+    width: 80px;
+    height: 40px;
+}
+.smoke{
+    color: whitesmoke;
+}
 #onOff{
     margin-top: 20px;
     margin-left: 40px;
@@ -31,11 +44,11 @@ body{
 }
 .jscolor{
     margin-top: 20px;
-    background-color: rgb()
-    margin-right: 50px;
+    background-color: rgb();
     display: block;
     width: 60px;
     height: 30px;
+    margin-left: 20px;
 }
 
 .button2:hover {

@@ -2,6 +2,9 @@ var gridpx = 960; // how many pixels
 var gridsize = 16;
 var color = 'grey';
 var paint = true;
+var randomColor = false;
+
+document.getElementById("numBlocks").value = 16;
 document.getElementById("onOff").innerText = "ON";
 
 document.getElementById("numBlocks").addEventListener("input", resetGrid);
@@ -15,9 +18,35 @@ document.getElementById("onOff").addEventListener("click", () => {
 displayGrid();
 enablePaint();
 
+/* Initializes event handler for checkbox to hide and show color choice
+NEEDS to change visual of 
+*/
+var checkbox = document.querySelector("input[name=randomCheckBox]");
+checkbox.checked = false;
+checkbox.addEventListener( 'change', function() {
+    if(this.checked) {
+        randomColor = true;
+        // document.getElementsByClassName("jscolor")[0].style.display = none;
+        document.getElementById("colorPicker").style.display = "none";
+        console.log("it's checked");
+    } else {
+        randomColor = false;
+        // document.getElementsByClassName("jscolor")[0].style.display = inline;
+        document.getElementById("colorPicker").style.display = "inline";
+        
+        console.log("jscolor.value: " + document.getElementsByClassName("jscolor")[0].value);
+        console.log("color: " + color);
+
+        console.log("it's not checked");
+    }
+});
+
 function colorit(event){
-    if(paint == true)
+    if(paint == true){
+        if(randomColor == true) 
+            setRandomColor();
         event.target.style.backgroundColor = color;
+    }
 }
 
 function enablePaint(){
@@ -70,4 +99,14 @@ function displayGrid(){
         div.addEventListener("mouseover", colorit);
         document.getElementById("grid").appendChild(div);
     }
+}
+
+function setRandomColor(){
+    var rValue = Math.floor(Math.random() * 256);
+    var gValue = Math.floor(Math.random() * 256);
+    var bValue = Math.floor(Math.random() * 256);
+    // document.getElementsByClassName("jscolor")[0].value = "rgb(" + rValue + "," + gValue + "," + bValue + ")";
+    document.getElementById('jsc').jscolor.fromRGB(rValue, gValue, bValue);
+    color = "rgb(" + rValue + "," + gValue + "," + bValue + ")";
+    console.log(color);
 }

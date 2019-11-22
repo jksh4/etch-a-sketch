@@ -8,9 +8,6 @@
 <body>
     <h1>Simple Etch-a-sketch</h1>
 
-    
-    
-    
     <div id="controls">
             <p id="blockNum">Restart? <br><span class="smaller">Blocks per side (5-200)</span> 
                     <input type="number" value="16" id="numBlocks" name="numBlocks" min="5" max="200">
@@ -21,9 +18,11 @@
 
             <p id="chColor">Choose color<br>
                 <span class="smaller">Random colors every block<input name="randomCheckBox" type="checkbox" id="myCheck"></span>
+                
                 <!-- <button class="jscolor {valueElement:'chosen-value', onFineChange:'setColor(this)'}"> -->
+                
                 <span id="colorPicker">
-                    <button id="jsc" class="jscolor {valueElement:null,value:'808080', onFineChange:'setColor(this)'}"><span class='smoke'>Pick a color</span></button>
+                    <button id="jsc" class="jscolor {valueElement:null,value:'808080', onFineChange:'setColor(this)'}">Pick a color</button>
                 </span>
                 
             </p>

@@ -32,7 +32,7 @@ checkbox.addEventListener( 'change', function() {
     } else {
         randomColor = false;
         // document.getElementsByClassName("jscolor")[0].style.display = inline;
-        document.getElementById("colorPicker").style.display = "inline";
+        document.getElementById("colorPicker").style.display = "block";
         
         console.log("jscolor.value: " + document.getElementsByClassName("jscolor")[0].value);
         console.log("color: " + color);
